@@ -36,12 +36,24 @@ p {
     font-size: 16px;
 }
 
+a {
+  color: #FF8587;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #FF6043;
+  text-decoration: none;
+}
+
 .container {
   height: 99vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding-left: 8%;
+  /*margin-right: -20%;*/
+  /*align-items: center;*/
 }
 
 .alignleft {
@@ -116,9 +128,7 @@ h2.subtitle {
   font-size: 48px;
   color: #fff;
   line-height: 1.1em;
-  margin: 40px 0 60px;
 }
-
 
 /* footer */
 p.copyright {
@@ -126,3 +136,18 @@ p.copyright {
   color: #fff;
   text-align: center;
 } 
+
+.social img {
+  width: 30px;
+  position: absolute;
+  margin-bottom: 50px;
+  margin-right: 50px;
+  right: 0;
+  bottom: 0;
+}
+
+.social img:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
