@@ -151,3 +151,15 @@ p.copyright {
   opacity: 0.5;
 }
 
+.container2 {
+  padding: 50px;
+  text-align: center;
+}
+
+.bullet {
+  font-size: 17px;
+  line-height: 120%;
+  color: #CCC !important;
+  text-align: left;
+  width: 60%;
+}
