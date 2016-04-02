@@ -17,4 +17,4 @@ app.get('*', function(req, res) {
   res.redirect('/');
 });
 
-app.listen(3000);
+app.listen(80);

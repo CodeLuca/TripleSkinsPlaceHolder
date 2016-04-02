@@ -14,16 +14,21 @@
 
     <!-- siimple style -->
     <link href="./index.css" rel="stylesheet">
-  
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.js"></script>
+
   </head>
 
   <body>
   <center>
     <div class="container">
       <h1 style='color: #e74c3c; margin-bottom: -13px; display: inline-block;'>
-        <b>TripleSkins.com:</b>
+      <img src="./logo1.png">
       </h1>
       <h3 style='color: #E8E8E8; display: inline-block; margin-bottom: -8px;'>A New Generation of CS:GO Betting</h3>
+      <h3 style='color: #E8E8E8; display: inline-block; margin-bottom: -8px;'><b>Tonight:</b> 1pm PST - 4pm EST - 9pm GMT</h3>
 
       <br>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/OczqXW30hNg" frameborder="0" allowfullscreen></iframe>
@@ -31,16 +36,34 @@
       <div class='social'>
         <a href='http://twitter.com/tripleskins'><img src="http://s1.city.ac.uk/cityr/i/start-here/Twitter_logo_red.png" /></a>
       </div>
+      <br>
+      <div class="clock"></div>
     </div>
 
+    <style type="text/css">
+      .flip-clock-label {
+        display: none;
+      }
+      .clock {
+        width: 47%;
+      }
+    </style>
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/jquery.countdown.min.js"></script>
-  <script type="text/javascript">
-  $('#countdown').countdown('2016/04/3', function(event) {
-    $(this).html(event.strftime('<h1 style="color: #EFEFEF">%w weeks %d days <br /> %H:%M:%S</h1>'));
-  });
-</script>
+    <script>
+      $(function() {
+        // Grab the current date
+        var currentDate = new Date();
+        // Set some date in the past. In this case, it's always been since Jan 1
+        var pastDate = new Date('2016-04-02T21:00:00+00:00'); 
+        // Calculate the difference in seconds between the future and current date
+        var diff = pastDate.getTime() / 1000 - currentDate.getTime() / 1000;
+        // Instantiate a coutdown FlipClock
+        clock = $('.clock').FlipClock(diff, {
+          // clockFace: 'TwentyFourHourClock',
+          countdown: true
+        });
+      });
+    </script>
+
   </body>
 </html>

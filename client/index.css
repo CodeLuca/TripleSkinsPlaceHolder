@@ -148,8 +148,6 @@ p.copyright {
 
 .social img:hover {
   cursor: pointer;
-  opacity: 0.5;
-}
 
 .container2 {
   padding: 50px;
@@ -162,4 +160,9 @@ p.copyright {
   color: #CCC !important;
   text-align: left;
   width: 60%;
+}
+
+.flip-clock-label {
+  display: none;
+  /*text-size: 100px;*/
 }
